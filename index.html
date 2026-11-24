@@ -1,0 +1,125 @@
+<!DOCTYPE html><html lang="ms"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><title>Ultrasains Tingkatan 1 – SET 1</title>
+<style>
+:root{--bg:#f6f7fb;--card:#fff;--tx:#1d2433;--mu:#667085;--bd:#d9deea;--ac:#2f5bea;--ok:#12805c;--okb:#e3f6ee;--no:#c0342b;--nob:#fdeceb;--il:#eef2ff;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#12151d;--card:#1b202c;--tx:#e8ebf3;--mu:#98a2b8;--bd:#2f3748;--ac:#7e9bff;--ok:#4cd3a0;--okb:#12352a;--no:#ff8a80;--nob:#3b1d1b;--il:#222a42}}
+:root[data-theme=dark]{--bg:#12151d;--card:#1b202c;--tx:#e8ebf3;--mu:#98a2b8;--bd:#2f3748;--ac:#7e9bff;--ok:#4cd3a0;--okb:#12352a;--no:#ff8a80;--nob:#3b1d1b;--il:#222a42}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+.w{max-width:980px;margin:0 auto;padding:16px;display:grid;grid-template-columns:1fr 250px;gap:16px}
+@media(max-width:760px){.w{grid-template-columns:1fr}}
+h1{font-size:1.25rem;margin:0}.top{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:space-between}
+.sub{color:var(--mu);font-size:.85rem}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:16px}
+.seg button,.btn{font:inherit;border:1px solid var(--bd);background:var(--card);color:var(--tx);padding:7px 12px;border-radius:9px;cursor:pointer}
+.seg button.on,.btn.p{background:var(--ac);color:#fff;border-color:var(--ac)}
+.btn:disabled{opacity:.4;cursor:default}
+.qn{color:var(--ac);font-weight:700;font-size:.85rem}
+.bm{font-weight:600;margin:4px 0}.en{color:var(--mu);font-style:italic;margin:0 0 6px}
+.il{background:var(--il);border-radius:10px;padding:8px;margin:10px 0;text-align:center}.il svg{max-width:100%;height:auto;max-height:190px}.il small{display:block;color:var(--mu);font-size:.75rem}
+svg text{fill:var(--tx);font:11px system-ui,sans-serif}svg .l{stroke:var(--tx);fill:none}
+.opt{display:flex;gap:10px;width:100%;text-align:left;font:inherit;color:var(--tx);background:var(--card);border:1.5px solid var(--bd);border-radius:11px;padding:10px 12px;margin:8px 0;cursor:pointer}
+.opt b{min-width:1.4em;color:var(--ac)}.opt.s{border-color:var(--ac);background:var(--il)}
+.opt.ok{border-color:var(--ok);background:var(--okb)}.opt.no{border-color:var(--no);background:var(--nob)}
+.opt i{display:block;color:var(--mu);font-size:.88rem}
+.nav{display:flex;justify-content:space-between;gap:8px;margin-top:12px}
+.omr h2,.res h2{font-size:1rem;margin:0 0 8px}
+.omr table{border-collapse:collapse;width:100%;font-size:.8rem}.omr td,.omr th{padding:2px 3px;text-align:center}
+.omr tr.cur td:first-child{color:var(--ac);font-weight:700}
+.b{display:inline-grid;place-items:center;width:20px;height:20px;border-radius:50%;border:1.5px solid var(--mu);font-size:.65rem;color:var(--mu);cursor:pointer}
+.b.f{background:var(--tx);border-color:var(--tx);color:var(--bg)}
+.b.ok{background:var(--ok);border-color:var(--ok);color:#fff}.b.no{background:var(--no);border-color:var(--no);color:#fff}.b.k{border-color:var(--ok);color:var(--ok);font-weight:700}
+.sc{font-size:2.2rem;font-weight:800}.nt{background:var(--nob);border-left:4px solid var(--no);padding:8px 10px;border-radius:6px;font-size:.85rem;margin-top:8px}
+.wr{border:1px solid var(--bd);border-radius:12px;padding:12px;margin:10px 0}
+table.cal{border-collapse:collapse;margin:auto}.cal td,.cal th{border:1px solid var(--bd);width:34px;height:26px;text-align:center;font-size:.8rem}.cal td.h{background:var(--ac);color:#fff;font-weight:700}
+</style></head><body><div class="w">
+<div class="top"><div><h1>Ultrasains Sains Tingkatan 1 – SET 1</h1><div class="sub" style="font-weight:700;color:var(--ac)">Ultrasains TC NORHAZLEEN J.</div><div class="sub">Bahagian A · 20 soalan aneka pilihan · berdasarkan UASA 2026</div></div>
+<div class="seg" id="lg"><button data-l="both" class="on">BM + BI</button><button data-l="bm">BM</button><button data-l="en">BI</button></div></div>
+<main id="m"></main>
+<aside class="card omr" id="o"></aside></div>
+<script>
+const R=(x,y,w,h,f='none',x2='')=>`<rect x="${x}" y="${y}" width="${w}" height="${h}" fill="${f}" class="l" ${x2}/>`,
+C=(x,y,r,f='none')=>`<circle cx="${x}" cy="${y}" r="${r}" fill="${f}" class="l"/>`,
+T=(x,y,s,a='middle')=>`<text x="${x}" y="${y}" text-anchor="${a}">${s}</text>`,
+Ln=(a,b,c,d,x='')=>`<path d="M${a} ${b}L${c} ${d}" class="l" ${x}/>`,
+S=(b,h=120)=>`<svg viewBox="0 0 300 ${h}">${b}</svg>`,
+B='#8fb4ff',G='#9ed8a8',Y='#ffd86b',P='#f4a6c0',
+dots=(pts,f)=>pts.map(p=>C(p[0],p[1],5,f)).join('');
+const Q=[
+{m:"Maklumat di bawah menunjukkan langkah-langkah dalam penyiasatan saintifik. Antara berikut, urutan yang manakah adalah betul?",e:"The information shows the steps in a scientific investigation. Which of the following sequences is correct?",
+v:S(R(10,10,135,40,'#cfe0ff')+T(77,34,'K: Membuat hipotesis')+R(155,10,135,40,'#cfe0ff')+T(222,34,'L: Menganalisis data')+R(10,65,135,40,'#cfe0ff')+T(77,89,'M: Membuat pemerhatian')+R(155,65,135,40,'#cfe0ff')+T(222,89,'N: Membuat kesimpulan')),
+o:[["K, M, L, N"],["M, K, L, N"],["M, N, K, L"],["K, L, N, M"]],a:0,n:"Skema rasmi: A. Urutan lazim penyiasatan (pemerhatian → hipotesis → analisis → kesimpulan) ialah B (M, K, L, N). Sila semak semula skema."},
+{m:"Pernyataan yang manakah benar tentang zarah-zarah dalam pepejal?",e:"Which statement is true about the particles in a solid?",
+v:S(dots([[110,30],[130,30],[150,30],[170,30],[190,30],[110,50],[130,50],[150,50],[170,50],[190,50],[110,70],[130,70],[150,70],[170,70],[190,70]],'#ffb38a')+T(150,105,'Susunan zarah dalam pepejal')),
+o:[["Zarah-zarah bergerak secara rawak.","The particles move randomly."],["Zarah-zarah bergetar pada kedudukan yang tetap.","The particles vibrate at a fixed position."],["Ruang antara zarah-zarah adalah sangat besar.","The spaces between particles are very big."],["Perlanggaran antara zarah-zarah adalah sangat kerap.","The collisions between particles take place frequently."]],a:1},
+{m:"Gas Z menyebabkan kesan rumah hijau. Apakah gas Z?",e:"Gas Z causes the greenhouse effect. What is gas Z?",
+v:S(C(40,30,18,Y)+Ln(55,42,120,85,'stroke-dasharray="4"')+'<path d="M120 100Q150 70 180 100" class="l"/>'+Ln(120,85,150,60)+R(190,35,90,30,B)+T(235,54,'Gas Z')+Ln(185,80,235,68,'stroke-dasharray="4"')+T(150,115,'Haba terperangkap di atmosfera')),
+o:[["Karbon monoksida","Carbon monoxide"],["Nitrogen oksida","Nitrogen oxide"],["Sulfur dioksida","Sulphur dioxide"],["Karbon dioksida","Carbon dioxide"]],a:3},
+{m:"Rajah yang manakah menunjukkan satu unsur?",e:"Which diagram represents an element?",
+v:S([['A',[[20,40,'a'],[40,60,'b'],[60,35,'a'],[30,80,'b']]],['B',[[100,45,'a'],[115,45,'b'],[130,80,'a'],[145,80,'b']]],['C',[[190,40,'a'],[210,40,'a'],[190,65,'a'],[210,65,'a'],[200,90,'a']]],['D',[[260,40,'a'],[275,40,'b'],[262,80,'a'],[285,70,'c']]]].map(g=>R(g[1][0][0]-18+(g[0]=='C'?0:0),20,66,85)+T(g[1][0][0]+15,16,g[0])+g[1].map(p=>C(p[0],p[1]+(0),6,p[2]=='a'?B:p[2]=='b'?P:Y)).join('')).join('').replace(/x="2"/,'')),
+o:[["Rajah A"],["Rajah B"],["Rajah C"],["Rajah D"]],a:2,k:"Ilustrasi (C: satu jenis atom sahaja)"},
+{m:"Rajah 1 menunjukkan struktur sel haiwan. Apakah fungsi struktur X?",e:"Diagram 1 shows the structures in an animal cell. What is the function of structure X?",
+v:S('<ellipse cx="150" cy="58" rx="100" ry="48" fill="#fff6d6" class="l"/>'+C(150,58,16,'#b9a3ff')+T(150,62,'')+Ln(235,25,205,45)+T(245,22,'X')+Ln(60,95,90,80)+T(40,100,'membran')+T(150,115,'X ditunjuk pada bahan separa cecair (sitoplasma)')),
+o:[["Menghasilkan tenaga untuk tindak balas dalam sel","Produces energy for the reactions in the cell"],["Mengawal segala aktiviti sel","Control all activities of the cell"],["Menjadi medium tindak balas kimia","As a medium of chemical reactions"],["Memberi bentuk tetap kepada sel","Gives a fixed shape to the cell"]],a:2},
+{m:"Rajah 2 menunjukkan dua keratan bunga yang telah matang pada pokok-pokok yang berlainan. Antara berikut, yang manakah menunjukkan pemindahan butir debunga yang dibawa oleh lebah semasa pendebungaan kacuk?",e:"Diagram 2 shows two mature flowers on two different plants. Which shows the transfer of pollen by bees during cross-pollination?",
+v:S(Ln(60,110,60,50)+C(60,42,14,P)+Ln(60,50,60,20)+C(60,18,4,'#c33')+T(72,22,'P (stigma)','start')+Ln(60,30,40,35)+T(25,40,'Q','end')+T(60,118,'Pokok 1')+Ln(240,110,240,50)+C(240,42,14,P)+Ln(240,50,240,20)+C(240,18,4,'#c33')+T(228,22,'R (stigma)','end')+Ln(240,30,262,35)+T(272,40,'S')+T(240,118,'Pokok 2')+T(150,60,'🐝')+T(150,80,'(anter: Q, S)')),
+o:[["S → P"],["R → Q"],["S → R"],["R → P"]],a:0,k:"Ilustrasi (stigma: P, R; anter: Q, S)"},
+{m:"Rajah 3 menunjukkan kedudukan pepejal X, cecair Y dan air di dalam sebuah bikar. Jika ketumpatan cecair Y ialah 2.65 g/cm³, apakah ketumpatan yang mungkin bagi pepejal X?",e:"Diagram 3 shows solid X, liquid Y and water in a beaker. If the density of liquid Y is 2.65 g/cm³, what is the possible density of solid X?",
+v:S(R(100,10,100,95)+R(101,70,98,34,'#e0b4ff')+R(101,12,98,58,'#cfe9ff')+R(130,60,40,14,'#bbb')+T(150,95,'Cecair Y')+T(150,38,'Air')+T(150,70,'X')+T(150,118,'Bikar')),
+o:[["0.85 g/cm³"],["1.12 g/cm³"],["2.65 g/cm³"],["4.33 g/cm³"]],a:1},
+{m:"Rajah 4 menunjukkan pengelasan jirim. Antara berikut, yang manakah contoh P, Q dan R?",e:"Diagram 4 shows a classification of matter. Which are examples of P, Q and R?",
+v:S(R(105,5,90,22)+T(150,20,'Bahan tulen')+R(40,45,70,22)+T(75,60,'Unsur')+R(190,45,70,22)+T(225,60,'P')+R(5,85,70,22)+T(40,100,'Q: logam')+R(95,85,95,22)+T(142,100,'R: bukan logam')+Ln(150,27,75,45)+Ln(150,27,225,45)+Ln(75,67,40,85)+Ln(75,67,142,85)+T(225,78,'Sebatian','middle')),
+o:[["P: Udara; Q: Aluminium; R: Sulfur"],["P: Air; Q: Besi; R: Karbon"],["P: Gula; Q: Kuprum; R: Zink"],["P: Timah; Q: Petroleum; R: Zink"]],a:1,k:"Ilustrasi (P = sebatian)"},
+{m:"Mengapakah sistem S.I. diterima oleh komuniti antarabangsa?",e:"Why is the SI system accepted by the international community?",
+v:S(['kg','m','s','K','A'].map((u,i)=>R(15+i*55,35,45,40,'#cfe0ff')+T(37+i*55,60,u)).join('')+T(150,100,'Unit asas S.I.')),
+o:[["Berdasarkan sistem barat","It is based on the western system"],["Suatu nilai dapat ditukarkan ke unit lain dengan mudah","A value is easily converted to another unit"],["Memudahkan komunikasi antarabangsa","It simplifies international communication"],["Digunakan secara meluas dalam bidang perubatan","It is widely used in the medical field"]],a:3,n:"Skema rasmi: D. Jawapan lazim ialah C (memudahkan komunikasi antarabangsa). Sila semak semula skema."},
+{m:"Rajah 5 menunjukkan struktur stoma yang terdapat pada sehelai daun. Apakah fungsi bahagian X?",e:"Diagram 5 shows the structure of a stoma on a leaf. What is the function of part X?",
+v:S('<path d="M110 60Q150 5 190 60Q150 115 110 60Z" fill="#9ed8a8" class="l"/>'+'<path d="M135 60Q150 55 165 60Q150 65 135 60Z" fill="#fff" class="l"/>'+Ln(200,20,175,40)+T(210,18,'X')+T(150,118,'Stoma dengan sel pengawal')),
+o:[["Mengawal pembukaan dan penutupan stoma","Control the opening and closing of stoma"],["Menyerap cahaya matahari","Absorbs sunlight"],["Menjalankan proses fotosintesis","Carries out photosynthesis"],["Menyerap air dan nutrien","Absorbs water and nutrients"]],a:0,k:"Ilustrasi (X = sel pengawal)"},
+{m:"Rajah 6 menunjukkan langit kelihatan kebiruan pada waktu tengah hari. Antara berikut, pernyataan yang benar tentang fenomena yang berlaku?",e:"Diagram 6 shows the sky appearing bluish at midday. Which statement is true about the phenomenon?",
+v:S(R(10,5,280,85,'#bfe0ff')+C(150,22,13,Y)+R(10,90,280,25,G)+T(150,60,'Langit kebiruan pada tengah hari')),
+o:[["Cahaya biru paling banyak diserakkan ke semua arah.","Blue light is mostly scattered in all directions."],["Cahaya matahari bersinar secara menegak.","Sunlight shines vertically."],["Cahaya merah dan jingga paling kurang diserakkan.","Red and orange lights are the least scattered."],["Lintasan cahaya yang melalui atmosfera adalah pendek.","Light's path through the atmosphere is short."]],a:1,n:"Skema rasmi: B. Jawapan lazim ialah A (atau C). Sila semak semula skema."},
+{m:"Maklumat di bawah adalah tentang fungsi suatu sel dalam badan manusia: “Sel M mengecut dan mengendur untuk membolehkan pergerakan badan.” Apakah sel M?",e:"Cell M contracts and relaxes to allow body movement. What is cell M?",
+v:S('<ellipse cx="150" cy="55" rx="110" ry="22" fill="#f4a6a6" class="l"/>'+C(150,55,8,'#b9a3ff')+T(150,100,'Sel M (memanjang, boleh mengecut)')),
+o:[["Sel darah merah","Red blood cell"],["Sel saraf","Nerve cell"],["Sel otot","Muscle cell"],["Sel epitelium","Epithelial cell"]],a:2,k:"Ilustrasi (pilihan jawapan ditulis dalam teks)"},
+{m:"Antara berikut, yang manakah berlaku dalam lapisan mesosfera?",e:"Which of the following occurs in the mesosphere layer?",
+v:S([['Termosfera','#ffd0d0'],['Mesosfera','#fff0b0'],['Stratosfera','#d4f2d4'],['Troposfera','#cfe0ff']].map((l,i)=>R(70,5+i*27,160,27,l[1])+T(150,23+i*27,l[0])).join('')),
+o:[["Satelit komunikasi mengelilingi Bumi","Communication satellites orbiting the Earth"],["Pembentukan awan dan air hujan","Formation of clouds and rainwater"],["Pembentukan aurora","Formation of aurora"],["Meteorit terbakar dan hancur","Meteorites are burned and destroyed"]],a:3},
+{m:"Rajah 7 menunjukkan sistem pembiakan perempuan. Yang manakah padanan adalah betul dengan fungsinya?",e:"Diagram 7 shows the female reproductive system. Which matching is correct with its function?",
+v:S('<path d="M150 25L115 75L185 75Z" fill="#f4a6c0" class="l"/>'+Ln(150,75,150,112)+Ln(115,60,70,45)+Ln(185,60,230,45)+'<ellipse cx="62" cy="42" rx="12" ry="8" fill="#ffd86b" class="l"/><ellipse cx="238" cy="42" rx="12" ry="8" fill="#ffd86b" class="l"/>'+T(62,30,'V')+T(150,60,'W')+T(160,108,'X','start')+T(150,12,'')),
+o:[["W – Tempat embrio membesar","W – Place where the embryo grows"],["V – Tempat embrio membesar","V – Place where the embryo grows"],["X – Menghasilkan sperma","X – Produces sperms"],["W – Menghasilkan hormon seks perempuan","W – Produces female sex hormones"]],a:0,k:"Ilustrasi (V = ovari, W = uterus, X = vagina)"},
+{m:"Vellu mendapati bahawa emas tulen perlu dicampurkan dengan sedikit logam lain sebelum dijadikan barangan perhiasan. Mengapakah emas tulen perlu dicampurkan dengan logam lain untuk dijadikan barangan perhiasan?",e:"Vellu found that pure gold must be mixed with a little other metal before being made into jewellery. Why?",
+v:S('<ellipse cx="150" cy="65" rx="40" ry="35" fill="none" stroke="#d4a017" stroke-width="9"/>'+C(150,28,9,'#9ed8f0')+T(150,115,'Barangan perhiasan emas')),
+o:[["Emas tulen sangat keras.","Pure gold is very hard."],["Emas tulen kelihatan pudar.","Pure gold looks dull."],["Emas tulen boleh mengkonduksikan haba dengan baik.","Pure gold can conduct heat well."],["Emas tulen sangat lembut dan tidak sesuai untuk kegunaan harian.","Pure gold is very soft and not suitable for daily use."]],a:3},
+{m:"Rajah 8 menunjukkan tumbuhan mengeluarkan air yang berlebihan melalui proses Q. Apakah proses Q?",e:"Diagram 8 shows a plant removing excess water through process Q. What is process Q?",
+v:S(Ln(100,115,100,60)+'<path d="M100 70Q60 60 50 30Q90 30 100 60M100 65Q140 55 150 25Q110 25 100 55" fill="#9ed8a8" class="l"/>'+[[170,30],[185,45],[165,55]].map(p=>C(p[0],p[1],4,'#8fd0ff')).join('')+Ln(150,35,165,32)+T(215,40,'Q: air keluar','start')),
+o:[["Respirasi","Respiration"],["Fotosintesis","Photosynthesis"],["Transpirasi","Transpiration"],["Pembiakan","Reproduction"]],a:2},
+{m:"Rajah 9 menunjukkan dua hidupan laut. Antara zon berikut, yang manakah tempat tinggal bagi hidupan di atas?",e:"Diagram 9 shows two sea creatures. In which zone do they live?",
+v:S(R(10,5,280,30,'#9fd3ff')+R(10,35,280,35,'#3b6fb0')+R(10,70,280,45,'#14264a')+'<ellipse cx="90" cy="92" rx="22" ry="11" fill="#7ea0c8" class="l"/>'+C(76,86,3,Y)+'<path d="M190 82Q210 70 230 82Z" fill="#c9b6ff" class="l"/>'+Ln(200,82,198,105)+Ln(212,82,214,105)+Ln(222,82,222,105)+T(150,50,'')),
+o:[["Zon gelap","Dark zone"],["Zon peralihan","Transition zone"],["Zon tengah malam","Midnight zone"],["Zon permukaan","Surface zone"]],a:0},
+{m:"Rajah 10 menunjukkan pembakaran arang di dalam balang gas. Apakah hasil proses ini?",e:"Diagram 10 shows the combustion of charcoal in a gas jar. What is the product of this process?",
+v:S(R(110,15,80,85)+R(135,70,30,16,'#555')+'<path d="M140 68Q150 48 160 68" fill="#ff9a3c" class="l"/>'+T(150,115,'Arang terbakar dalam balang gas')),
+o:[["Air dan haba","Water and heat"],["Karbon dioksida dan air","Carbon dioxide and water"],["Oksigen dan haba","Oxygen and heat"],["Karbon dioksida dan haba","Carbon dioxide and heat"]],a:3},
+{m:"Rajah 11 menunjukkan kalendar bagi bulan Jun 2026. Seorang wanita mengalami haidnya pada 20 Jun. Hitungkan tarikh haidnya yang berikutnya.",e:"Diagram 11 shows the calendar for June 2026. A female has her menstruation on 20 June. Calculate the date of her next menstruation.",
+h:(()=>{let r='<table class="cal"><tr><th colspan=7>Jun 2026</th></tr><tr>'+['Isn','Sel','Rab','Kha','Jum','Sab','Aha'].map(d=>`<th>${d}</th>`).join('')+'</tr><tr>';for(let d=1;d<=30;d++){r+=`<td${d==20?' class=h':''}>${d}</td>`;if((d)%7==0&&d<30)r+='</tr><tr>'}return r+'</tr></table>'})(),
+o:[["30 Jun"],["6 Julai"],["17 Julai"],["18 Julai"]],a:2,n:"Skema rasmi: C (17 Julai). Kitaran 28 hari: 20 Jun + 28 hari = 18 Julai (D). Sila semak semula skema."},
+{m:"Rajah 12: Seorang pelakon memakai jubah hijau dan memegang bunga mawar yang kelihatan hitam di bawah cahaya kuning pentas. Apabila lampu pentas bertukar kepada cahaya magenta, apakah warna jubah dan bunga mawar pada pandangan penonton?",e:"Diagram 12: An actor wears a green robe and holds a rose that appears black under yellow light. When the stage light changes to magenta, what colours do the robe and rose appear to the audience?",
+v:S('<path d="M150 5L100 55L200 55Z" fill="#ff7be5" opacity=".45" class="l"/>'+'<path d="M150 62L125 112L175 112Z" fill="#4caf50" class="l"/>'+C(150,70,0)+C(150,52,9,'#bbb')+T(220,70,'Jubah hijau','start')+T(215,90,'Mawar (hitam di bawah cahaya kuning)','start')+T(75,30,'Cahaya magenta','end')),
+o:[["Jubah kelihatan biru, bunga mawar kelihatan magenta","The robe appears blue, the rose appears magenta"],["Jubah kelihatan hitam, bunga mawar kelihatan biru","The robe appears black, the rose appears blue"],["Jubah kelihatan hijau, bunga mawar kelihatan hitam","The robe appears green, the rose appears black"],["Jubah kelihatan hitam, bunga mawar kelihatan merah","The robe appears black, the rose appears red"]],a:1}
+];
+const KEY=Q.map(q=>q.a),L='ABCD';let cur=0,ans=Array(20).fill(null),done=false,lg='both';
+const $=id=>document.getElementById(id);
+const tx=(m,e)=>(lg!='en'?`<div class="bm">${m}</div>`:'')+(lg!='bm'&&e?`<div class="en">${e}</div>`:'');
+function fig(q){return `<div class="il">${q.h||q.v}<small>Ilustrasi${q.k?' – '+q.k.replace(/^Ilustrasi\s*/,'').replace(/^\(|\)$/g,''):''}</small></div>`}
+function render(){const q=Q[cur];
+$('m').innerHTML=`<div class="card"><div class="qn">SOALAN ${cur+1} / 20</div>${tx(q.m,q.e)}${fig(q)}`+q.o.map((o,i)=>{let c='opt';if(done){if(i==q.a)c+=' ok';else if(i==ans[cur])c+=' no'}else if(ans[cur]==i)c+=' s';return `<button class="${c}" data-i="${i}"><b>${L[i]}</b><span>${lg!='en'?o[0]:o[1]||o[0]}${lg=='both'&&o[1]?`<i>${o[1]}</i>`:''}</span></button>`}).join('')+(done&&q.n?`<div class="nt">⚠ ${q.n}</div>`:'')+`<div class="nav"><button class="btn" id="pv" ${cur?'':'disabled'}>← Sebelum</button>${cur<19?'<button class="btn p" id="nx">Seterusnya →</button>':'<button class="btn p" id="sb">'+(done?'Lihat keputusan':'Hantar jawapan')+'</button>'}</div></div>`+(done?result():'');
+document.querySelectorAll('.opt').forEach(b=>b.onclick=()=>{if(!done){ans[cur]=+b.dataset.i;render()}});
+$('pv').onclick=()=>{cur--;render()};if($('nx'))$('nx').onclick=()=>{cur++;render()};if($('sb'))$('sb').onclick=submit;omr()}
+function omr(){const sc=ans.filter((a,i)=>a===KEY[i]).length;
+$('o').innerHTML=`<h2>Borang OMR</h2><table><tr><th></th>${[...L].map(x=>`<th>${x}</th>`).join('')}</tr>`+ans.map((a,i)=>`<tr class="${i==cur?'cur':''}"><td>${i+1}</td>`+[0,1,2,3].map(j=>{let c='b';if(done){if(j==KEY[i])c+=' k';if(a==j)c+=a==KEY[i]?' ok':' no'}else if(a==j)c+=' f';return `<td><span class="${c}" data-q="${i}" data-j="${j}">${L[j]}</span></td>`}).join('')+'</tr>').join('')+`</table><div style="margin-top:10px"><div class="sub">Skor</div><div class="sc">${done?sc:'–'} / 20</div><div class="sub">Dijawab: ${ans.filter(a=>a!==null).length}/20</div></div>`;
+document.querySelectorAll('.b').forEach(s=>s.onclick=()=>{if(!done){ans[+s.dataset.q]=+s.dataset.j;cur=+s.dataset.q}else cur=+s.dataset.q;render()})}
+function submit(){if(!done){const u=ans.filter(a=>a===null).length;if(u&&!confirm(u+' soalan belum dijawab. Hantar juga?'))return;done=true;render()}else{$('rs').scrollIntoView({behavior:'smooth'})}}
+function result(){const w=Q.map((q,i)=>i).filter(i=>ans[i]!==KEY[i]),sc=20-w.length;
+return `<div class="card res" id="rs" style="margin-top:14px"><h2>Keputusan: ${sc} / 20 (${sc*5}%)</h2>${w.length?`<h2>Senarai soalan salah untuk ulang kaji (${w.length})</h2>`+w.map(i=>{const q=Q[i];const f=ans[i]===null?'<em>Tidak dijawab</em>':`${L[ans[i]]}. ${q.o[ans[i]][0]}`;return `<div class="wr"><div class="qn">SOALAN ${i+1}</div>${tx(q.m,q.e)}<div>Jawapan anda: <b style="color:var(--no)">${f}</b></div><div>Jawapan skema: <b style="color:var(--ok)">${L[q.a]}. ${q.o[q.a][0]}${q.o[q.a][1]?' / '+q.o[q.a][1]:''}</b></div>${q.n?`<div class="nt">⚠ ${q.n}</div>`:''}<button class="btn" onclick="cur=${i};render();scrollTo(0,0)">Lihat soalan</button></div>`}).join(''):'<p>Tahniah! Semua betul. 🎉</p>'}<button class="btn p" onclick="ans=Array(20).fill(null);done=false;cur=0;render();scrollTo(0,0)">Cuba semula</button></div>`}
+$('lg').onclick=e=>{const b=e.target.closest('button');if(!b)return;lg=b.dataset.l;document.querySelectorAll('#lg button').forEach(x=>x.classList.toggle('on',x==b));render()};
+render();
+</script></body></html>
